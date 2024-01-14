@@ -1,0 +1,332 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  info [
+    "FR1,4 FL2,3 BR5,8 BL6,7  "
+  ]
+  basicTimeStep 16
+  FPS 30
+}
+Viewpoint {
+  orientation 0.055736299790735265 -0.9983675217044667 -0.01248024404081611 5.8419233596143405
+  position 1.5035490962694809 0.3861009561471817 3.236234029705808
+  follow "robot(2):solid"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation 0.0292343 0.34 -0.250101
+  children [
+    DEF Front_Right Hinge2Joint {
+      jointParameters HingeJointParameters {
+        position 9.77776100537088e-07
+        axis 0 0 1
+        anchor 0 0 0.328907
+      }
+      jointParameters2 JointParameters {
+        axis 1 0 0
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+          maxTorque 100
+        }
+      ]
+      device2 [
+        RotationalMotor {
+          name "motor9"
+          maxTorque 100
+        }
+      ]
+      endPoint Solid {
+        translation -0.1365738628357983 -0.06449495229457558 0.3289074050103355
+        rotation 0.8443230036894598 -0.5358345436184198 -8.547542450708192e-05 3.1414765525902735
+        children [
+          DEF arm1 Shape {
+            appearance ChequeredParquetry {
+            }
+            geometry Cylinder {
+              height 0.3
+              radius 0.02
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position -2
+              axis 0 0 1
+              anchor -2.77556e-17 0.15 0
+            }
+            device [
+              RotationalMotor {
+                name "motor4"
+                maxTorque 100
+              }
+            ]
+            endPoint Solid {
+              translation 0.12292719059481275 0.0937063919970391 0.00017899837271988193
+              rotation 7.776153993390878e-05 -0.00012100576437513002 -0.9999999896553738 1.999775850796437
+              children [
+                DEF leg Group {
+                  children [
+                    Transform {
+                      translation 0 0.13 0
+                      children [
+                        Shape {
+                          appearance TireRubber {
+                          }
+                          geometry Sphere {
+                            radius 0.04
+                          }
+                        }
+                      ]
+                    }
+                    USE arm1
+                  ]
+                }
+              ]
+              boundingObject USE leg
+              physics Physics {
+                damping Damping {
+                }
+              }
+            }
+          }
+        ]
+        name "solid(5)"
+        boundingObject USE arm1
+        physics Physics {
+        }
+      }
+    }
+    DEF FrontLeft Transform {
+      translation 0 0 -0.34
+      children [
+        Hinge2Joint {
+          jointParameters HingeJointParameters {
+            position 9.77776100537088e-07
+            axis 0 0 1
+            anchor 0 0 0.34
+          }
+          jointParameters2 JointParameters {
+            axis 1 0 0
+          }
+          device [
+            RotationalMotor {
+              name "motor2"
+              maxTorque 100
+            }
+          ]
+          device2 [
+            RotationalMotor {
+              name "motor10"
+              maxTorque 100
+            }
+          ]
+          endPoint Solid {
+            translation -0.13654131836584799 -0.06445648369555293 0.3289066539116254
+            rotation 0.8443231283746224 -0.5358343453344362 -9.618579457892832e-05 3.141451054382266
+            children [
+              USE arm1
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position -2
+                  axis 0 0 1
+                  anchor -2.77556e-17 0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "motor3"
+                    maxTorque 100
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.12284882081060187 0.09364608707091442 0.00017845170067021184
+                  rotation 7.751403208168065e-05 -0.000120675384304292 -0.9999999897145132 2.0002275706199635
+                  children [
+                    USE leg
+                  ]
+                  boundingObject USE leg
+                  physics Physics {
+                    damping Damping {
+                    }
+                  }
+                }
+              }
+            ]
+            name "solid(1)"
+            boundingObject USE arm1
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    DEF BackRight Transform {
+      translation -0.5 0 0
+      children [
+        Hinge2Joint {
+          jointParameters HingeJointParameters {
+            position 9.77776100537088e-07
+            axis 0 0 1
+            anchor 0 0 0.329
+          }
+          jointParameters2 JointParameters {
+            axis 1 0 0
+          }
+          device [
+            RotationalMotor {
+              name "motor5"
+              maxTorque 100
+            }
+          ]
+          device2 [
+            RotationalMotor {
+              name "motor11"
+              maxTorque 100
+            }
+          ]
+          endPoint Solid {
+            translation -0.1365635499695919 -0.06446725646563087 0.3288931354405191
+            rotation 0.8443230207148935 -0.5358345147033997 -9.769058168661974e-05 3.1414562579344274
+            children [
+              USE arm1
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position -2
+                  axis 0 0 1
+                  anchor -2.77556e-17 0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "motor8"
+                    maxTorque 100
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.13649098775592283 0.08763490334138485 -1.6244438458268155e-06
+                  rotation -7.098701151737177e-07 1.0651718870469258e-06 -0.9999999999991808 1.9999999999961744
+                  children [
+                    USE leg
+                  ]
+                  boundingObject USE leg
+                  physics Physics {
+                    damping Damping {
+                    }
+                  }
+                }
+              }
+            ]
+            name "solid(3)"
+            boundingObject USE arm1
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    DEF BackLeft Transform {
+      translation -0.5 0 -0.34
+      children [
+        Hinge2Joint {
+          jointParameters HingeJointParameters {
+            position 9.77776100537088e-07
+            axis 0 0 1
+            anchor 0 0 0.34
+          }
+          jointParameters2 JointParameters {
+            axis 1 0 0
+          }
+          device [
+            RotationalMotor {
+              name "motor6"
+              maxTorque 100
+            }
+          ]
+          device2 [
+            RotationalMotor {
+              name "motor12"
+              maxTorque 100
+            }
+          ]
+          endPoint Solid {
+            translation -0.13662566208265772 -0.06446014293844307 0.32887402901132123
+            rotation 0.8443230030530262 -0.5358345450854953 -8.251387605389523e-05 3.14146477624107
+            children [
+              USE arm1
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position -2
+                  axis 0 0 1
+                  anchor -2.77556e-17 0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "motor7"
+                    maxTorque 100
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.1364909925784723 0.0876349012161553 -1.542553657141168e-06
+                  rotation -6.75188946243846e-07 1.0131430765110248e-06 -0.9999999999992588 2.0000000000099596
+                  children [
+                    USE leg
+                  ]
+                  boundingObject USE leg
+                  physics Physics {
+                    damping Damping {
+                    }
+                  }
+                }
+              }
+            ]
+            name "solid(2)"
+            boundingObject USE arm1
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    DEF RobotBody Solid {
+      translation -0.28 0 0.16
+      children [
+        DEF boxshape Shape {
+          appearance Copper {
+          }
+          geometry DEF box Box {
+            size 0.6 0.06 0.3
+          }
+        }
+      ]
+      boundingObject USE boxshape
+      physics Physics {
+        damping Damping {
+        }
+      }
+    }
+  ]
+  name "robot(2)"
+  physics Physics {
+  }
+  controller "forwardedcontroller"
+  supervisor TRUE
+  synchronization FALSE
+  window "generic_window"
+}
+Solid {
+  children [
+    DEF floor Shape {
+      appearance ChequeredParquetry {
+        textureTransform TextureTransform {
+          scale 6 5
+        }
+      }
+      geometry Plane {
+        size 5 5
+      }
+    }
+  ]
+  boundingObject USE floor
+}
