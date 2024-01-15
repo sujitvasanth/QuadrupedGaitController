@@ -4,6 +4,7 @@ A webots quadruped gait generator
 This is a python2 project that work in Windows and linux utilizing tkinter
 It requires Webots 2020b1
 The controller is referenced within the project itself. You should set Tooles >> preferences >> general >> pythoncommand to python2
+There are various gait files that can be loaded into the generator including walking and turning gaits
 
 <img src="media/ezgif-1-3e85706516.gif" width="33%"><img src="media/ezgif-1-94c1b09821.gif" width="33%"><img src="media/ezgif-1-44b11274bd.gif" width="33%">
 
