@@ -1,4 +1,4 @@
-# QuadrupedGaitController
+# Quadruped Gait Controller
 A webots quadruped gait generator
 
 This is a python2 project that work in Windows and linux utilizing tkinter
