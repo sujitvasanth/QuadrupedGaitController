@@ -11,5 +11,9 @@ there is a video about its use at https://www.youtube.com/watch?v=EDuPl-gz040
 
 [<img src="media/Screenshot%20from%202024-01-14%2020-45-53.png" width="33%">](https://www.youtube.com/watch?v=EDuPl-gz040)
 
+You can also see [RobotDog work.pdf](documentation/RobotDog%20work.pdf) explaining the maths and theory
+
+There is also a document about [making Webots work with IDLE and tkinter](documentation/Making%20webots%20work%20with%20python%20idle.pdf)
+
 
 
